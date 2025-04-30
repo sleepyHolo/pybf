@@ -84,7 +84,7 @@ class Tester():
     def test_file(self, name) -> float:
         # code
         code = ''
-        with open(name + '.bf', 'r') as fc:
+        with open(name + '.bf', 'r', encoding='utf-8') as fc:
             for c in fc.read():
                 if c in '.,><+-[]':
                     code += c
@@ -96,4 +96,4 @@ class Tester():
 
 if __name__ == '__main__':
     a = Tester()
-    a.test_file('./tmp_files/test')
+    a.test_file('./test/add')
